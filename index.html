@@ -4,29 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skand Tripathi - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Skand Tripathi</h1>
-        <p>Electronics Engineering Student | Data Science Enthusiast</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Skand Tripathi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 data-aos="fade-up">Skand Tripathi</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Electronics Engineering Student | Data Science Enthusiast</p>
+        </div>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>I am a senior-year Electronics and Communications Engineering undergraduate...</p>
+
+    <!-- About Section -->
+    <section id="about" class="container mt-5 pt-5" data-aos="fade-right">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/profile.jpg" class="img-fluid rounded-circle" alt="Profile Image">
+            </div>
+            <div class="col-md-6">
+                <h2>About Me</h2>
+                <p>I am a senior-year Electronics and Communications Engineering undergraduate...</p>
+            </div>
+        </div>
     </section>
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/skand08/GeoSpatial-AI">GeoSpatial-AI</a> - Geospatial AI refers to the application of artificial intelligence techniques to analyze and interpret geospatial data, which includes data with a geographic component such as satellite imagery, maps, and geographic information system (GIS) data. It combines AI algorithms with spatial data analysis. </li>
-            <li><a href="https://github.com/skand08/Medicine_Recommender">Medicine_Recommender</a> - This project recommends medicine and various predictions based on your symptoms. </li>
-            <li><a href="https://github.com/skand08/Customer-Personality-Analysis">Customer-Personality-Analysis</a> - This project aims to perform customer segmentation by analyzing customer data using exploratory data analysis (EDA), profiling, and unsupervised learning techniques. The goal is to identify distinct customer segments to help the business better understand its customers, their habits, behavior, and needs. Customer segmentation allows the company to tailor products, services, and marketing strategies for different customer groups, optimizing business outcomes.</li>
-            <li><a href="https://github.com/skand08/Logistics_Routing_Problem">Logistics_Routing_Problem</a> - The Vehicle Routing Problem (VRP) is a combinatorial optimization and integer programming problem that focuses on efficiently routing a fleet of vehicles to deliver goods or services to a set of locations. The objective is to determine the most cost-effective routes for the trucks while satisfying various constraints i.e. equal time taken, balanced distances traveled, etc. </li>
-            <!-- Add more projects here -->
-        </ul>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mt-5" data-aos="fade-up">
+        <h2 class="text-center">Projects</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/project1.jpg" class="card-img-top" alt="GeoSpatial-AI">
+                    <div class="card-body">
+                        <h5 class="card-title">GeoSpatial-AI</h5>
+                        <p class="card-text">Geospatial AI refers to the application of artificial intelligence techniques...</p>
+                        <a href="https://github.com/skand08/GeoSpatial-AI" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="images/project2.jpg" class="card-img-top" alt="Medicine Recommender">
+                    <div class="card-body">
+                        <h5 class="card-title">Medicine Recommender</h5>
+                        <p class="card-text">This project recommends medicine and various predictions based on your symptoms...</p>
+                        <a href="https://github.com/skand08/Medicine_Recommender" class="btn btn-primary">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat similar structure for other projects -->
+        </div>
     </section>
-    <footer>
-        <p>Contact me: skandtripathi0808@gmail.com</p>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center">Contact Me</h2>
+            <form class="mt-4">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>Contact me: <a href="mailto:skandtripathi0808@gmail.com" class="text-white">skandtripathi0808@gmail.com</a></p>
     </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS animations
+    </script>
 </body>
 </html>
